@@ -4,6 +4,10 @@ from PIL import Image
 import pytesseract
 import os
 import glob, sys, fitz
+from autocorrect import Speller
+
+spell = Speller(lang='en', only_replacements=True)
+
 
 # pdf zoom settings
 zoom_x = 2.0  # horizontal zoom
@@ -34,7 +38,7 @@ def pdfToText(pdffilename):
         pytesseract.tesseract_cmd = path_to_tesseract 
         
         # extraction
-        text = pytesseract.image_to_string(img) 
+        text = spell(pytesseract.image_to_string(img)) 
         with open("dining_hall_data.txt", "a+") as output:
             output.write(text)
             output.write("END_OF_SECTION\n")
