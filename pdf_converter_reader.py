@@ -23,6 +23,8 @@ def pdfToText(pdffilename):
     pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
     path_to_tesseract = r"C:\Program Files\Tesseract-OCR\pytesseract.exe"
 
+    
+
     directory = 'imagedata'
     for image in os.listdir(directory):
         
@@ -33,7 +35,12 @@ def pdfToText(pdffilename):
         
         # extraction
         text = pytesseract.image_to_string(img) 
-        
+        with open("dining_hall_data.txt", "a+") as output:
+            output.write(text)
+            output.write("END_OF_SECTION\n")
         # print
-        print(text[:-1])
-        print('\n')
+        # print(text[:-1])
+        # print('\n')
+    for filename in os.listdir(directory):
+        if os.path.isfile(os.path.join(directory, filename)):
+            os.remove(os.path.join(directory, filename))
