@@ -1,0 +1,244 @@
+{
+    "orginal_chicken_tenders_4pc": [
+        {
+            "name" : "Chicken Tenders 4-pc",
+            "calories" : 580,
+            "protein" : null,
+            "cost" : 8.59
+        }
+    ],
+
+    "orginal_chicken_tenders_5pc": [
+        {
+            "name" : "Chicken Tenders 5-pc",
+            "calories" : 670,
+            "protein" : null,
+            "cost" : 9.69
+        }
+    ],
+
+    "orginal_chicken_tenders_6pc": [
+        {
+            "name" : "Chicken Tenders 6-pc",
+            "calories" : 580,
+            "protein" : null,
+            "cost" : 10.79
+        }
+    ],
+
+    "buffalo_chicken_tenders_4pc": [
+        {
+            "name" : "Buffalo Chicken Tenders 4-pc",
+            "calories" : 720,
+            "protein" : null,
+            "cost" : 8.99
+        }
+    ],
+
+    "buffalo_chicken_tenders_5pc": [
+        {
+            "name" : "Buffalo Chicken Tenders 5-pc",
+            "calories" : 880,
+            "protein" : null,
+            "cost" : 10.19
+        }
+    ],
+
+    "buffalo_chicken_tenders_6pc": [
+        {
+            "name" : "Buffalo Chicken Tenders 6-pc",
+            "calories" : 1040,
+            "protein" : null,
+            "cost" : 11.39
+        }
+    ],
+
+    "asian_chicken_tenders_4pc": [
+        {
+            "name" : "Asian Chicken Tenders 4-pc",
+            "calories" : 690,
+            "protein" : null,
+            "cost" : 8.99
+        }
+    ],
+
+    "asian_chicken_tenders_5pc": [
+        {
+            "name" : "Asian Chicken Tenders 5-pc",
+            "calories" : 880,
+            "protein" : null,
+            "cost" : 10.19
+        }
+    ],
+
+    "asian_chicken_tenders_6pc": [
+        {
+            "name" : "Asian Chicken Tenders 6-pc",
+            "calories" : 910,
+            "protein" : null,
+            "cost" : 11.39
+        }
+    ],
+
+    "the_loaded_tender": [
+        {
+            "name" : "The Loaded Tender",
+            "calories" : 660,
+            "protein" : null,
+            "cost" : 7.29
+        }
+    ],
+
+    "buffalo_tender": [
+        {
+            "name" : "Buffalo Tender",
+            "calories" : 790,
+            "protein" : null,
+            "cost" : 7.29
+        }
+    ],
+
+    "crispy_tender": [
+        {
+            "name" : "Crispy Tender",
+            "calories" : 490,
+            "protein" : null,
+            "cost" : 6.79
+        }
+    ],
+
+    "grilled_tender": [
+        {
+            "name" : "Grilled Tender",
+            "calories" : 360,
+            "protein" : null,
+            "cost" : 6.99
+        }
+    ],
+
+    "veggie_burger": [
+        {
+            "name" : "Veggie Burger",
+            "calories" : 540,
+            "protein" : null,
+            "cost" : 7.29
+        }
+    ],
+
+    "smothered_cheese_fries": [
+        {
+            "name" : "Smothered Cheese Fries",
+            "calories" : 1270,
+            "protein" : null,
+            "cost" : 7.99
+        }
+    ],
+
+    "buffalo_chicken_tender_melt": [
+        {
+            "name" : "Buffalo Chicken Tender Melt",
+            "calories" : 1130,
+            "protein" : null,
+            "cost" : 9.99
+        }
+    ],
+
+    "bacon_cheese_fries": [
+        {
+            "name" : "Bacon Cheese Fries",
+            "calories" : 1450,
+            "protein" : null,
+            "cost" : 8.99
+        }
+    ],
+
+    "all_american_rice_bowl": [
+        {
+            "name" : "All American Rice Bowl",
+            "calories" : 760,
+            "protein" : null,
+            "cost" : 8.89
+        }
+    ],
+
+    "asian_tenders_rice_bowl": [
+        {
+            "name" : "Asian Tenders Rice Bowl",
+            "calories" : 760,
+            "protein" : null,
+            "cost" : 8.89
+        }
+    ],
+
+    "tullys_tender_salad": [
+        {
+            "name" : "Tullys Tender Salad",
+            "calories" : 570,
+            "protein" : null,
+            "cost" : 8.99
+        }
+    ],
+
+    "grilled_tender_salad": [
+        {
+            "name" : "Grilled Tender Salad",
+            "calories" : 550,
+            "protein" : null,
+            "cost" : 8.99
+        }
+    ],
+
+    "lemonade": [
+        {
+            "name" : "Lemonade",
+            "calories" : 300,
+            "protein" : null,
+            "cost" : 2.49
+        }
+    ],
+
+    "flavored_lemonade": [
+        {
+            "name" : "Flavored Lemonade",
+            "calories" : 300,
+            "protein" : null,
+            "cost" : 2.99
+        }
+    ],
+
+    "sweet_tea": [
+        {
+            "name" : "Sweet Tea",
+            "calories" : 250,
+            "protein" : null,
+            "cost" : 2.49
+        }
+    ],
+
+    "unsweet_tea": [
+        {
+            "name" : "Unsweet Tea",
+            "calories" : 10,
+            "protein" : null,
+            "cost" : 2.49
+        }
+    ],
+
+    "bottled_water": [
+        {
+            "name" : "Bottled Water",
+            "calories" : 0,
+            "protein" : null,
+            "cost" : 2.00
+        }
+    ],
+
+    "cookie_one": [
+        {
+            "name" : "Cookie",
+            "calories" : 350,
+            "protein" : null,
+            "cost" : 1.99
+        }
+    ]
+}
