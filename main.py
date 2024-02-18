@@ -1,4 +1,5 @@
 from urllib.request import urlopen
+import json
 import menu_scraper, pdf_converter_reader, fda_api, re
 
 items = {'c4': {'D': {'item': []}, 'Friday': [], 'Saturday': [], 'Sunday': []}
@@ -39,3 +40,55 @@ if __name__ == "__main__":
             parse_text(x, day.group())
             file = open('dining_hall_data.txt', 'r+')
             file.truncate(0)
+    for hall in items:
+        for day in items[hall]:
+            if day == "D":
+                for i in range(len(items[hall][day]["item"])):
+                    info = fda_api.req(items[hall][day]["item"][i][0])
+                    if(info["totalHits"] == 0):
+                        newdata = {
+                            "name" : items[hall][day]["item"][i][0],
+                            "protein": "",
+                            "fat":"",
+                            "carbs":"",
+                            "calories":"",
+                            "sugar":"",
+                            "fiber":""
+                        }
+                    else:
+                        newdata = {
+                        "name" : items[hall][day]["item"][i][0],
+                            "protein": info["foods"][0]["foodNutrients"][0]["value"],
+                            "fat":info["foods"][0]["foodNutrients"][1]["value"],
+                            "carbs":info["foods"][0]["foodNutrients"][2]["value"],
+                            "calories":info["foods"][0]["foodNutrients"][3]["value"],
+                            "sugar":info["foods"][0]["foodNutrients"][8]["value"],
+                            "fiber":info["foods"][0]["foodNutrients"][9]["value"]
+                        }
+            else:
+                for i in range(len(items[hall][day])):
+                    info = fda_api.req(items[hall][day][i][0])
+                    if(info["totalHits"] == 0):
+                        newdata = {
+                            "name" : items[hall][day][i][0],
+                            "protein": "",
+                            "fat":"",
+                            "carbs":"",
+                            "calories":"",
+                            "sugar":"",
+                            "fiber":""
+                        }
+                    else:
+                        newdata = {
+                        "name" : items[hall][day][i][0],
+                            "protein": info["foods"][0]["foodNutrients"][0]["value"],
+                            "fat":info["foods"][0]["foodNutrients"][1]["value"],
+                            "carbs":info["foods"][0]["foodNutrients"][2]["value"],
+                            "calories":info["foods"][0]["foodNutrients"][3]["value"],
+                            "sugar":info["foods"][0]["foodNutrients"][8]["value"],
+                            "fiber":info["foods"][0]["foodNutrients"][9]["value"]
+                        }
+            
+            
+    with open("output.json", "w") as output:
+        json.dump(items, output, indent=2)
