@@ -21,7 +21,7 @@ def getDinningPDFS(url):
     with open("dining_hall.html", "w") as output:
         output.write(html)
         
-    with open(html) as output:
+    with open("dining_hall.html", "r") as output:
         soup = BeautifulSoup(output, "lxml")
 
     dining_hall_a_tags = soup.find_all(href=re.compile("Resident%20Dining%20(M|m)enus"))

@@ -2,3 +2,4 @@
 test.json
 *.pdf
 __pycache__
+*.html
