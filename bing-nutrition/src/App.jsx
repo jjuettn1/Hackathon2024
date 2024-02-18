@@ -13,7 +13,7 @@ import output from './output.json'
 
 function App() {
   
-  const [openList, setOpenList] = useState(["Hinman", "Appalachian", "C4", "Chenango Room" ])
+  const [openList, setOpenList] = useState(["Hinman", "Appalachian", "C4" ])
   const [wIndex, setWIndex] = useState(0);
   const [selectedHall, setSelectedHall] = useState("");
   const [showPlan, setShowPlan] = useState(false);
