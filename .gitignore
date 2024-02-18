@@ -1,0 +1,8 @@
+.env
+test.json
+*.pdf
+__pycache__
+*.html
+*.png
+dining_hall_data.txt
+output.json
