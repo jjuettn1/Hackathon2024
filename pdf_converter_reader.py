@@ -38,10 +38,11 @@ def pdfToText(pdffilename):
         pytesseract.tesseract_cmd = path_to_tesseract 
         
         # extraction
-        text = spell(pytesseract.image_to_string(img)) 
+        #text = spell(pytesseract.image_to_string(img)) 
+        text = pytesseract.image_to_string(img)
         with open("dining_hall_data.txt", "a+") as output:
             output.write(text)
-            output.write("END_OF_SECTION\n")
+            #output.write("END_OF_SECTION\n")
         # print
         # print(text[:-1])
         # print('\n')
