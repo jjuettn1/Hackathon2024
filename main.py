@@ -48,6 +48,7 @@ if __name__ == "__main__":
                     if(info["totalHits"] == 0):
                         newdata = {
                             "name" : items[hall][day]["item"][i][0],
+                            "price": items[hall][day]["item"][i][1],
                             "protein": "",
                             "fat":"",
                             "carbs":"",
@@ -57,7 +58,8 @@ if __name__ == "__main__":
                         }
                     else:
                         newdata = {
-                        "name" : items[hall][day]["item"][i][0],
+                            "name" : items[hall][day]["item"][i][0],
+                            "price": items[hall][day]["item"][i][1],
                             "protein": info["foods"][0]["foodNutrients"][0]["value"],
                             "fat":info["foods"][0]["foodNutrients"][1]["value"],
                             "carbs":info["foods"][0]["foodNutrients"][2]["value"],
@@ -65,12 +67,14 @@ if __name__ == "__main__":
                             "sugar":info["foods"][0]["foodNutrients"][8]["value"],
                             "fiber":info["foods"][0]["foodNutrients"][9]["value"]
                         }
+                    items[hall][day]["item"][i] = newdata
             else:
                 for i in range(len(items[hall][day])):
                     info = fda_api.req(items[hall][day][i][0])
                     if(info["totalHits"] == 0):
                         newdata = {
                             "name" : items[hall][day][i][0],
+                            "price": items[hall][day][i][1],
                             "protein": "",
                             "fat":"",
                             "carbs":"",
@@ -80,7 +84,8 @@ if __name__ == "__main__":
                         }
                     else:
                         newdata = {
-                        "name" : items[hall][day][i][0],
+                            "name" : items[hall][day][i][0],
+                            "price": items[hall][day][i][1],
                             "protein": info["foods"][0]["foodNutrients"][0]["value"],
                             "fat":info["foods"][0]["foodNutrients"][1]["value"],
                             "carbs":info["foods"][0]["foodNutrients"][2]["value"],
@@ -88,6 +93,7 @@ if __name__ == "__main__":
                             "sugar":info["foods"][0]["foodNutrients"][8]["value"],
                             "fiber":info["foods"][0]["foodNutrients"][9]["value"]
                         }
+                    items[hall][day][i] = newdata
             
             
     with open("output.json", "w") as output:
