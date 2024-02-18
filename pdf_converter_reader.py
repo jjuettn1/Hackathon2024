@@ -17,7 +17,7 @@ def pdfToText(pdffilename):
     doc = fitz.open(pdffilename)  # open document
     for page in doc:  # iterate through the pages
         pix = page.get_pixmap(matrix=mat)  # render page to an image
-        pix.save("./data/page-%i.png" % page.number)  # store image
+        pix.save("./imagedata/page-%i.png" % page.number)  # store image
 
     # defining paths
     pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
