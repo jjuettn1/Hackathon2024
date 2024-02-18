@@ -10,7 +10,8 @@ api_url = "https://api.nal.usda.gov/fdc/v1/foods/search"
 def req(q):
     query = q.strip().replace(" ", r"%20")
     response = requests.get(api_url+"?api_key="+key+"&query="+query+"&dataType=Survey (FNDDS)")
-    with open("test.json", "w") as out:
-        json.dump(response.json(), out, indent=2)
+    # with open("intermediate.json", "w") as out:
+    #     json.dump(response.json(), out, indent=2)
+    return response.json()
 
 # req("cheddar cheese")
